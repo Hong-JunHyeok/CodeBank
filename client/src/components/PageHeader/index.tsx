@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { HeaderContainer } from "./styles";
 import CodeBankLogo from "../../../public/codebank_logo_standard.png";
@@ -11,16 +12,20 @@ const PageHeader = () => {
         <SearchForm />
       </div>
       <div className="navbar-container">
-        <ul className="navbar-container-contents">
-          <li>리스트</li>
-          <li>리스트</li>
-          <li>리스트</li>
-          <li>리스트</li>
-        </ul>
-        <ul className="navbar-container-user">
-          <li className="join">회원가입</li>
-          <li className="login">로그인</li>
-        </ul>
+        <div className="navbar-container-sections">
+          <ul className="navbar-container-sections-contents">
+            <li>
+              <Link href="/fields">필드</Link>
+            </li>
+            <li>
+              <Link href="/profile">내 프로필</Link>
+            </li>
+          </ul>
+          <ul className="navbar-container-sections-user">
+            <li className="join">회원가입</li>
+            <li className="login">로그인</li>
+          </ul>
+        </div>
       </div>
     </HeaderContainer>
   );

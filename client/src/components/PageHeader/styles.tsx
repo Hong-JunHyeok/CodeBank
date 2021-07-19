@@ -12,28 +12,30 @@ export const HeaderContainer = styled.header`
     }
   }
   .navbar-container {
-    display: flex;
     height: 60px;
     background-color: black;
     color: white;
-    ul {
-      height: 100%;
-      margin: 0 auto;
+    &-sections {
+      width: 100%;
       max-width: 1000px;
+      margin: 0 auto;
+      height: 100%;
       display: flex;
       align-items: center;
-    }
-    &-contents li {
-      margin-right: 40px;
-      font-weight: bold;
-      user-select: none;
-      cursor: pointer;
-    }
-    &-user li {
-      margin-right: 40px;
-      font-weight: bold;
-      user-select: none;
-      cursor: pointer;
+      justify-content: space-between;
+      &-contents {
+        display: flex;
+        & > li {
+          & > a {
+            text-decoration: none;
+            color: white;
+          }
+          margin-right: 30px;
+        }
+      }
+      &-user {
+        display: flex;
+      }
     }
   }
   .join {
@@ -45,8 +47,9 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 40%;
+
     background: #78bf97;
     color: black;
+    font-size: 14px;
   }
 `;
