@@ -1,11 +1,9 @@
-import PageFooter from "../components/PageFooter";
-import PageHeader from "../components/PageHeader";
+import PageLayout from "../components/PageLayout";
 
 const MainPage = () => {
   return (
     <>
-      <PageHeader />
-      <PageFooter />
+      <PageLayout>Hello</PageLayout>
     </>
   );
 };

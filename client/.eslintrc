@@ -47,6 +47,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "react/prop-types": 0
   }
 }
