@@ -1,17 +1,13 @@
-import React from "react";
-import styled from "@emotion/styled";
-
-const StyledBox = styled.div`
-  padding: 100px;
-  background-color: black;
-`;
+import PageFooter from "../components/PageFooter";
+import PageHeader from "../components/PageHeader";
 
 const MainPage = () => {
   return (
     <>
-      Code Bank
-      <StyledBox />
+      <PageHeader />
+      <PageFooter />
     </>
   );
 };
+
 export default MainPage;
