@@ -37,14 +37,20 @@ const MainPage = () => {
             {
               id: 1,
               title: "게시글",
+              thumnail:
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/200px-React-icon.svg.png",
             },
             {
               id: 2,
               title: "게시글1",
+              thumnail:
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/200px-React-icon.svg.png",
             },
             {
               id: 3,
               title: "게시글2",
+              thumnail:
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/200px-React-icon.svg.png",
             },
           ]}
         />
@@ -54,14 +60,20 @@ const MainPage = () => {
             {
               id: 1,
               title: "게시글",
+              thumnail:
+                "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
             },
             {
               id: 2,
               title: "게시글1",
+              thumnail:
+                "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
             },
             {
               id: 3,
               title: "게시글2",
+              thumnail:
+                "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
             },
           ]}
         />
