@@ -12,7 +12,6 @@ const Slider: VFC<Props> = ({ items }) => {
   const [currentTab, setCurrentTab] = useState(0);
   const slideRef = useRef<HTMLDivElement>(null);
 
-  console.log(currentTab);
   const handleNextSlide = useCallback(() => {
     if (currentTab >= TOTAL_SLIDES) {
       setCurrentTab(0);
@@ -44,12 +43,22 @@ const Slider: VFC<Props> = ({ items }) => {
           <BannerItem imageSrc={bannerItem.imageSrc} key={index} />
         )}
       />
-      <button type="button" onClick={handlePrevSlide}>
-        Prev
-      </button>
-      <button type="button" onClick={handleNextSlide}>
-        Next
-      </button>
+      <div className="btns">
+        <button
+          type="button"
+          onClick={handlePrevSlide}
+          className="slide-btn prev"
+        >
+          Prev
+        </button>
+        <button
+          type="button"
+          onClick={handleNextSlide}
+          className="slide-btn next"
+        >
+          Next
+        </button>
+      </div>
     </SliderContainer>
   );
 };

@@ -1,6 +1,4 @@
 import Head from "next/head";
-import BannerItem from "../components/BannerItem";
-import List from "../components/List";
 import PageLayout from "../components/PageLayout";
 import PostsContainer from "../components/PostsContainer";
 import Slider from "../components/Slider";
@@ -72,6 +70,6 @@ const MainPage = () => {
   );
 };
 
-//* getServerSideProps로 BannerList와 PostList를 받아와서 Props로 전달할 것.
+//* getServerSideProps로 BannerList와 PostList를 받아오기
 
 export default MainPage;

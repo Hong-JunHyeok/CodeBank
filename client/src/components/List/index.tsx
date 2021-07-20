@@ -5,7 +5,7 @@ interface Props<T> {
   className?: string;
   items: Array<T>;
   renderItems: (item: T, index: number) => ReactElement;
-  ref: Ref<HTMLDivElement>;
+  ref?: Ref<HTMLDivElement>;
 }
 
 const List: VFC<Props<any>> = forwardRef<HTMLDivElement, Props<any>>(
