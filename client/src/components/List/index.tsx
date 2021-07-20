@@ -7,7 +7,7 @@ interface Props<T> {
   renderItems: (item: T, index: number) => ReactElement;
 }
 
-const BannerList: VFC<Props<any>> = ({ items, renderItems, className }) => {
+const List: VFC<Props<any>> = ({ items, renderItems, className }) => {
   return (
     <ListContainer className={className}>
       {items.map((item, index) => (
@@ -17,4 +17,4 @@ const BannerList: VFC<Props<any>> = ({ items, renderItems, className }) => {
   );
 };
 
-export default BannerList;
+export default List;

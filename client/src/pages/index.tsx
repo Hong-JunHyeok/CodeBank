@@ -1,6 +1,7 @@
 import Head from "next/head";
 import List from "../components/List";
 import PageLayout from "../components/PageLayout";
+import PostsContainer from "../components/PostsContainer";
 
 const MainPage = () => {
   return (
@@ -13,21 +14,53 @@ const MainPage = () => {
           items={[
             {
               id: 1,
-              title: "안녕",
+              title: "베너",
             },
             {
               id: 2,
-              title: "안녕1",
+              title: "베너1",
             },
             {
               id: 3,
-              title: "안녕2",
+              title: "베너2",
             },
           ]}
           renderItems={(item) => <div key={item.id}>{item.title}</div>}
         />
-        {/* <PostList title="실시간 인기있는 게시글" />
-        <PostList title="실시간 최긴 게시글" /> */}
+        <PostsContainer
+          title="실시간 인기있는 게시글"
+          posts={[
+            {
+              id: 1,
+              title: "게시글",
+            },
+            {
+              id: 2,
+              title: "게시글1",
+            },
+            {
+              id: 3,
+              title: "게시글2",
+            },
+          ]}
+        />
+        <PostsContainer
+          title="실시간 최근 게시글"
+          posts={[
+            {
+              id: 1,
+              title: "게시글",
+            },
+            {
+              id: 2,
+              title: "게시글1",
+            },
+            {
+              id: 3,
+              title: "게시글2",
+            },
+          ]}
+        />
       </PageLayout>
     </>
   );
