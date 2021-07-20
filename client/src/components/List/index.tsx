@@ -1,20 +1,23 @@
-import { ReactElement, VFC } from "react";
+import { ReactElement, VFC, forwardRef, Ref } from "react";
 import { ListContainer } from "./styles";
 
 interface Props<T> {
   className?: string;
   items: Array<T>;
   renderItems: (item: T, index: number) => ReactElement;
+  ref: Ref<HTMLDivElement>;
 }
 
-const List: VFC<Props<any>> = ({ items, renderItems, className }) => {
-  return (
-    <ListContainer className={className}>
-      {items.map((item, index) => (
-        <div>{renderItems(item, index)}</div>
-      ))}
-    </ListContainer>
-  );
-};
+const List: VFC<Props<any>> = forwardRef<HTMLDivElement, Props<any>>(
+  ({ items, renderItems, className }, ref) => {
+    return (
+      <ListContainer className={className} ref={ref}>
+        {items.map((item, index) => (
+          <>{renderItems(item, index)}</>
+        ))}
+      </ListContainer>
+    );
+  },
+);
 
 export default List;

@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
+import Head from "next/head";
 
 const NotFoundNotifyContainer = styled.div`
   h1 {
@@ -49,6 +50,9 @@ const NotFoundPage = () => {
   const { push } = useRouter();
   return (
     <>
+      <Head>
+        <title>코드뱅크 | 찾을수 없는 페이지</title>
+      </Head>
       <NotFoundNotifyContainer>
         <h1>
           4<LogoCircle />4

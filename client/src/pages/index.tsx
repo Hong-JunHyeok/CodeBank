@@ -1,7 +1,9 @@
 import Head from "next/head";
+import BannerItem from "../components/BannerItem";
 import List from "../components/List";
 import PageLayout from "../components/PageLayout";
 import PostsContainer from "../components/PostsContainer";
+import Slider from "../components/Slider";
 
 const MainPage = () => {
   return (
@@ -9,24 +11,28 @@ const MainPage = () => {
       <Head>
         <title>코드뱅크 | 개발을 공유하다.</title>
       </Head>
+
       <PageLayout>
-        <List
+        <Slider
           items={[
             {
               id: 1,
-              title: "베너",
+              imageSrc:
+                "https://static-cse.canva.com/blob/268150/create-banners.jpg",
             },
             {
               id: 2,
-              title: "베너1",
+              imageSrc:
+                "http://printing24.co.kr/web/upload/category/shop1_69_top_757403.jpg",
             },
             {
               id: 3,
-              title: "베너2",
+              imageSrc:
+                "https://i.pinimg.com/originals/94/71/8a/94718a3e1bf3e152854f2dbf88ce31d7.jpg",
             },
           ]}
-          renderItems={(item) => <div key={item.id}>{item.title}</div>}
         />
+
         <PostsContainer
           title="실시간 인기있는 게시글"
           posts={[

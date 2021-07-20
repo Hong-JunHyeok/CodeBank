@@ -19,6 +19,9 @@ const GlobalStyle = () => {
         body {
           font-family: NanumSquare;
         }
+
+        .slider {
+        }
       `}
     />
   );
