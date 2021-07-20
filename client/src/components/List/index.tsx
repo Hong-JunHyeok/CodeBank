@@ -1,4 +1,4 @@
-import { ReactElement, VFC, forwardRef, Ref } from "react";
+import { ReactElement, forwardRef, Ref } from "react";
 import { ListContainer } from "./styles";
 
 interface Props<T> {
@@ -8,7 +8,7 @@ interface Props<T> {
   ref?: Ref<HTMLDivElement>;
 }
 
-const List: VFC<Props<any>> = forwardRef<HTMLDivElement, Props<any>>(
+const List = forwardRef<HTMLDivElement, Props<any>>(
   ({ items, renderItems, className }, ref) => {
     return (
       <ListContainer className={className} ref={ref}>

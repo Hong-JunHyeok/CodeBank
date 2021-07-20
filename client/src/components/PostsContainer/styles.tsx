@@ -12,13 +12,21 @@ export const StyledPostsContainer = styled.div`
   }
   .list {
   }
+  .left {
+    display: flex;
+  }
+  .right {
+    display: flex;
+  }
   .post-item {
     display: flex;
+    justify-content: space-between;
     padding: 10px 5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #e4e4e4;
     height: 80px;
     &-thumnail {
       width: 80px;
+      margin-right: 10px;
       & > img {
         width: 100%;
         height: 100%;
@@ -28,6 +36,23 @@ export const StyledPostsContainer = styled.div`
       display: flex;
       align-items: center;
       font-weight: bold;
+    }
+    &-commentCount {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: #0540f2;
+      padding-left: 5px;
+    }
+    &-author {
+      display: flex;
+      align-items: center;
+    }
+    &-createat {
+      font-size: 12px;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
     }
   }
 `;
