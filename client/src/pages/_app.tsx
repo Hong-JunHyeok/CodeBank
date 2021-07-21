@@ -1,6 +1,7 @@
 import React from "react";
 import { AppProps } from "next/app";
 import GlobalStyle from "../styles/GlobalStyle";
+import wrapper from "../../store";
 
 const AppComponent = ({ Component, pageProps }: AppProps) => {
   return (
@@ -16,4 +17,4 @@ const AppComponent = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default AppComponent;
+export default wrapper.withRedux(AppComponent);

@@ -12,9 +12,7 @@ const List = forwardRef<HTMLDivElement, Props<any>>(
   ({ items, renderItems, className }, ref) => {
     return (
       <ListContainer className={className} ref={ref}>
-        {items.map((item, index) => (
-          <>{renderItems(item, index)}</>
-        ))}
+        {items.map((item, index) => renderItems(item, index))}
       </ListContainer>
     );
   },

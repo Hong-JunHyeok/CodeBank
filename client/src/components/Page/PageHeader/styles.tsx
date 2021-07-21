@@ -35,6 +35,14 @@ export const HeaderContainer = styled.header`
       }
       &-user {
         display: flex;
+        align-items: center;
+        &-welcome {
+          display: flex;
+          margin-right: 10px;
+          & > h1 {
+            font-weight: bold;
+          }
+        }
       }
     }
   }
@@ -54,9 +62,17 @@ export const HeaderContainer = styled.header`
     background: #78bf97;
     color: black;
     font-size: 14px;
+    padding: 5px;
     & > a {
       text-decoration: none;
       color: black;
+    }
+  }
+  .logout {
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
     }
   }
 `;

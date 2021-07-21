@@ -48,6 +48,7 @@ const LogoCircle = styled.div`
 
 const NotFoundPage = () => {
   const { push } = useRouter();
+
   return (
     <>
       <Head>
