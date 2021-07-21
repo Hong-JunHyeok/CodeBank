@@ -6,10 +6,6 @@ const GlobalStyle = () => {
     <Global
       styles={css`
         ${emotionResetCSS}
-        @font-face {
-          font-family: "NanumSquare";
-          src: url("../assets/font/NanumSquareRegular.ttf") format("truetype");
-        }
 
         *,
         *::after,
@@ -17,7 +13,7 @@ const GlobalStyle = () => {
           box-sizing: border-box;
         }
         body {
-          font-family: NanumSquare;
+          font-family: "NanumSquare", sans-serif !important;
         }
 
         .slider {

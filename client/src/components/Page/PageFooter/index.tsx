@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FooterContainer } from "./styles";
-import CodeBankLogo from "../../../public/codebank_logo_white.png";
+import CodeBankLogo from "../../../../public/codebank_logo_white.png";
 
 const PageFooter = () => {
   return (

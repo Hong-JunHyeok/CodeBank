@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { HeaderContainer } from "./styles";
-import CodeBankLogo from "../../../public/codebank_logo_standard.png";
-import SearchForm from "../SearchForm";
+import CodeBankLogo from "../../../../public/codebank_logo_standard.png";
+import SearchForm from "../../SearchForm";
 
 const PageHeader = () => {
   return (
@@ -22,8 +22,12 @@ const PageHeader = () => {
             </li>
           </ul>
           <ul className="navbar-container-sections-user">
-            <li className="join">회원가입</li>
-            <li className="login">로그인</li>
+            <li className="join">
+              <Link href="/auth/join">회원가입</Link>
+            </li>
+            <li className="login">
+              <Link href="/auth/login">로그인</Link>
+            </li>
           </ul>
         </div>
       </div>

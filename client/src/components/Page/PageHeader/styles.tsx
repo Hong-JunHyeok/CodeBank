@@ -41,15 +41,22 @@ export const HeaderContainer = styled.header`
   .join {
     font-weight: lighter !important;
     margin-right: 20px !important;
+    & > a {
+      text-decoration: none;
+      color: white;
+    }
   }
   .login {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100px;
-
     background: #78bf97;
     color: black;
     font-size: 14px;
+    & > a {
+      text-decoration: none;
+      color: black;
+    }
   }
 `;
