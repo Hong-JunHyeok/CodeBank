@@ -21,12 +21,15 @@ const PageHeader = () => {
 
   return (
     <HeaderContainer>
-      <div
-        className="search-container"
-        onClick={handleClickLogo}
-        onKeyDown={handleClickLogo}
-      >
-        <Image src={CodeBankLogo} width={120} height={120} placeholder="blur" />
+      <div className="search-container">
+        <Image
+          src={CodeBankLogo}
+          width={120}
+          height={120}
+          placeholder="blur"
+          onClick={handleClickLogo}
+          onKeyDown={handleClickLogo}
+        />
         <SearchForm />
       </div>
       <div className="navbar-container">
