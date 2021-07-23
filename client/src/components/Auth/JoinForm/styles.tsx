@@ -27,6 +27,10 @@ export const JoinFormContainer = styled.form`
       font-size: 15px;
       font-weight: bold;
       width: 100%;
+      transition: ease-in-out 0.2s;
+      &:focus {
+        border: 1px solid black;
+      }
     }
     &-button {
       margin-top: 30px;

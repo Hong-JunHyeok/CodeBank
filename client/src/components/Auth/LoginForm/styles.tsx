@@ -14,6 +14,10 @@ export const LoginFormContainer = styled.form`
     margin-bottom: 30px;
     font-size: 15px;
     font-weight: bold;
+    transition: ease-in-out 0.2s;
+    &:focus {
+      border: 1px solid black;
+    }
   }
   .login-button {
     margin-top: 30px;
