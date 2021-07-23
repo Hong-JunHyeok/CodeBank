@@ -21,6 +21,10 @@ export const AllFieldListContainer = styled.div`
   }
   .field-item {
     padding: 20px 0;
+    cursor: pointer;
+    &:hover {
+      text-decoration-line: underline;
+    }
     &:not(:last-child) {
       border-bottom: 1px solid #ccc;
     }

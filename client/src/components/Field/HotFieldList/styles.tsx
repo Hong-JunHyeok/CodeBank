@@ -18,7 +18,14 @@ export const HotFieldListContainer = styled.div`
     padding: 20px;
   }
   .field-item {
+    cursor: pointer;
     padding: 20px 0;
+    &:hover .field-name {
+      text-decoration-line: underline;
+    }
+    .field-name {
+      display: inline;
+    }
     &:not(:last-child) {
       border-bottom: 1px solid #ccc;
     }

@@ -1,7 +1,14 @@
+import { useRouter } from "next/router";
+import { useCallback } from "react";
 import List from "../../List";
 import { AllFieldListContainer } from "./styles";
 
 const AllFieldList = () => {
+  const router = useRouter();
+  const handlePushField = useCallback((fieldId: number) => {
+    router.push(`/field/${fieldId}`);
+  }, []);
+
   return (
     <AllFieldListContainer>
       <header className="all-header">
@@ -9,11 +16,29 @@ const AllFieldList = () => {
       </header>
       <ul className="all-list">
         <List
-          items={[{}, {}, {}]}
-          renderItems={(field, index) => {
+          items={[
+            {
+              id: 0,
+              field_name: "웹",
+            },
+            {
+              id: 1,
+              field_name: "앱",
+            },
+            {
+              id: 2,
+              field_name: "윈도우",
+            },
+          ]}
+          renderItems={(field) => {
             return (
-              <li key={index} className="field-item">
-                필드 {index}
+              <li
+                key={field.id}
+                className="field-item"
+                onClick={() => handlePushField(field.id)}
+                onKeyDown={() => handlePushField(field.id)}
+              >
+                {field.field_name}
               </li>
             );
           }}
