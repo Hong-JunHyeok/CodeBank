@@ -27,6 +27,7 @@ export const CommentListContainer = styled.div`
       }
       &-createdAt {
         flex: 2;
+        text-align: end;
       }
     }
   }

@@ -24,6 +24,10 @@ export const StyledPostsContainer = styled.div`
     padding: 10px 5px;
     border-bottom: 1px solid #e4e4e4;
     height: 80px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
     &-thumnail {
       width: 80px;
       margin-right: 10px;
