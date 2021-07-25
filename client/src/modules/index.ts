@@ -1,5 +1,6 @@
 import { HYDRATE } from "next-redux-wrapper";
 import { AnyAction, CombinedState, combineReducers } from "redux";
+import { TypedUseSelectorHook, useSelector } from "react-redux";
 import { IUserState } from "./user/types";
 import user from "./user/reducer";
 
@@ -22,5 +23,7 @@ const rootReducer = (
     }
   }
 };
+
+export const useTypedSelector: TypedUseSelectorHook<State> = useSelector;
 
 export default rootReducer;

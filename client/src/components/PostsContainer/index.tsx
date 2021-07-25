@@ -7,11 +7,12 @@ import { StyledPostsContainer } from "./styles";
 interface Props {
   title?: string;
   posts: Posts;
+  fieldId: number;
 }
 
-const PostsContainer: VFC<Props> = ({ title, posts }) => {
+const PostsContainer: VFC<Props> = ({ title, posts, fieldId }) => {
   const handleViewPost = useCallback((id: number) => {
-    router.push(`/post/${id}`);
+    router.push(`/field/${fieldId}/${id}`);
   }, []);
 
   return (

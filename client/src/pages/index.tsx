@@ -32,6 +32,7 @@ const MainPage = () => {
         />
 
         <PostsContainer
+          fieldId={0}
           title="실시간 인기있는 게시글"
           posts={[
             {
@@ -64,6 +65,7 @@ const MainPage = () => {
           ]}
         />
         <PostsContainer
+          fieldId={0}
           title="실시간 최근 게시글"
           posts={[
             {

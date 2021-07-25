@@ -1,7 +1,7 @@
 import React from "react";
-import PageLayout from "../../components/Page/PageLayout";
-import FieldPageLayout from "../../components/Field/FieldPageLayout";
-import PostsContainer from "../../components/PostsContainer";
+import PageLayout from "../../../components/Page/PageLayout";
+import FieldPageLayout from "../../../components/Field/FieldPageLayout";
+import PostsContainer from "../../../components/PostsContainer";
 
 const PostPage = () => {
   return (
@@ -19,6 +19,7 @@ const PostPage = () => {
         </header>
 
         <PostsContainer
+          fieldId={0}
           posts={[
             {
               id: 1,

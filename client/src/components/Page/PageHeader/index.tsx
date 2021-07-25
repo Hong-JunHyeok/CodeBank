@@ -2,15 +2,16 @@ import router from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { HeaderContainer } from "./styles";
 import CodeBankLogo from "../../../../public/codebank_logo_standard.png";
 import SearchForm from "../../SearchForm";
 import { logOut } from "../../../modules/user/actions";
+import { useTypedSelector } from "../../../modules";
 
 const PageHeader = () => {
   const dispatch = useDispatch();
-  const { isLoggedIn, name } = useSelector((state: any) => state.user);
+  const { isLoggedIn, name } = useTypedSelector((state) => state.user);
   const handleClickLogo = useCallback(() => {
     router.push("/");
   }, []);
