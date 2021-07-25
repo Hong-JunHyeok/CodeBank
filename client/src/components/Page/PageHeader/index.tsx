@@ -26,7 +26,6 @@ const PageHeader = () => {
           src={CodeBankLogo}
           width={120}
           height={120}
-          placeholder="blur"
           onClick={handleClickLogo}
           onKeyDown={handleClickLogo}
         />
