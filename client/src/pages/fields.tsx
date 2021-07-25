@@ -1,6 +1,6 @@
 import Head from "next/head";
 import AllFieldList from "../components/Field/AllFieldList";
-import FieldPageLayout from "../components/Field/FieldPageLayout";
+import FieldsPageLayout from "../components/Field/FieldsPageLayout";
 import HotFieldList from "../components/Field/HotFieldList";
 import PageLayout from "../components/Page/PageLayout";
 
@@ -11,7 +11,7 @@ const Fields = () => {
         <title>코드뱅크 | 필드</title>
       </Head>
       <PageLayout>
-        <FieldPageLayout>
+        <FieldsPageLayout>
           <header className="fieldpage-header">
             <h1>
               자신만의 <strong>필드</strong>를 생성해서 지식을 공유해보세요.
@@ -20,7 +20,7 @@ const Fields = () => {
           </header>
           <HotFieldList />
           <AllFieldList />
-        </FieldPageLayout>
+        </FieldsPageLayout>
       </PageLayout>
     </>
   );

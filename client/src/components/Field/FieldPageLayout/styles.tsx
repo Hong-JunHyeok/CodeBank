@@ -1,26 +1,35 @@
 import styled from "@emotion/styled";
 
 export const FieldPageLayoutContainer = styled.div`
-  padding: 50px 0;
-  .fieldpage-header {
-    display: flex;
-    align-items: center;
+  & > header {
     & > h1 {
-      font-size: 24px;
+      font-size: 40px;
+      padding: 20px 0;
+      color: #0540f2;
+      border-bottom: 4px solid #0540f2;
       font-weight: bold;
-      & > strong {
-        color: #0540f2;
+      &::after {
+        content: " 필드";
       }
     }
-    & > button {
-      margin-left: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 20px;
-      border: none;
-      background-color: #78bf97;
-      cursor: pointer;
+    & > section {
+      padding: 20px 0;
+      border-bottom: 3px solid #ddd;
+      & > p {
+        font-size: 18px;
+        padding: 10px 0;
+        &::before {
+          content: "소개글 : ";
+        }
+      }
+      & > h2 {
+        text-align: end;
+        font-weight: bold;
+        &::before {
+          font-weight: lighter;
+          content: "창립자 : ";
+        }
+      }
     }
   }
 `;

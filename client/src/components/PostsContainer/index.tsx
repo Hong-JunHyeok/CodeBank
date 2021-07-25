@@ -5,7 +5,7 @@ import { Post, Posts } from "../../types/post";
 import { StyledPostsContainer } from "./styles";
 
 interface Props {
-  title: string;
+  title?: string;
   posts: Posts;
 }
 
@@ -16,7 +16,7 @@ const PostsContainer: VFC<Props> = ({ title, posts }) => {
 
   return (
     <StyledPostsContainer>
-      <h1>{title}</h1>
+      {title && <h1>{title}</h1>}
       <div className="list">
         <List
           items={posts}
