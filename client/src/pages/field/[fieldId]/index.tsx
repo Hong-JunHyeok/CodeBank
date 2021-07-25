@@ -55,4 +55,6 @@ const PostPage = () => {
   );
 };
 
+//* fieldId가 hot과 new일때 동작처리
+
 export default PostPage;
