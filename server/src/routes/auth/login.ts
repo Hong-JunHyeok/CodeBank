@@ -1,5 +1,6 @@
-import { Router, Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 import { User } from "../../entity/User";
+import jwt from "../../utils/jwt";
 
 export default async (req: Request, res: Response, next: NextFunction) => {
   const { id, password } = req.body;
@@ -24,9 +25,15 @@ export default async (req: Request, res: Response, next: NextFunction) => {
       });
     }
 
+    const accessToken = jwt.sign(existUser);
+    const refreshToken = jwt.refresh();
+
     return res.json({
       message: "로그인에 성공했습니다.",
-      data: existUser,
+      data: {
+        accessToken,
+        refreshToken,
+      },
     });
   } catch (error) {
     console.error(error);

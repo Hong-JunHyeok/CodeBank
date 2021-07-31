@@ -1,42 +1,16 @@
 import { Router } from "express";
 const router = Router();
 
-router.get("/", (req, res) => {
-  return res.json({
-    data: [
-      { id: 1, content: "qweqwe" },
-      { id: 2, content: "qweqwe" },
-    ],
-  });
-});
+import createPost from "./createPost";
+import deletePost from "./deletePost";
+import editPost from "./editPost";
+import getPost from "./getPost";
+import getPosts from "./getPosts";
 
-router.get("/:post_id", (req, res) => {
-  const post_id = req.params.post_id;
-  return res.json({
-    data: {
-      id: post_id,
-      content: "qweqwe",
-    },
-  });
-});
-
-router.post("/", async (req, res) => {
-  const { title, content, field } = req.body;
-  return res.status(201).json({
-    message: "정상적으로 생성되었습니다.",
-    data: {
-      title,
-      content,
-      field,
-    },
-  });
-});
-
-router.delete("/:post_id", async (req, res) => {
-  const { post_id } = req.params;
-  return res.json({
-    message: `포스트 ${post_id}가 정상적으로 삭제되었습니다.`,
-  });
-});
+router.get("/", getPost);
+router.get("/:post_id", getPosts);
+router.post("/:post_idx", createPost);
+router.delete("/:post_idx", deletePost);
+router.patch("/:post_idx", editPost);
 
 export default router;

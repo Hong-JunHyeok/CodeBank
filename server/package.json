@@ -6,6 +6,7 @@
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.4",
     "@types/node": "^8.0.29",
     "ts-node": "3.3.0",
     "typescript": "3.3.3333"
