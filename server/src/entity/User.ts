@@ -5,13 +5,17 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   OneToMany,
+  BaseEntity,
 } from "typeorm";
 import { Post } from "./Post";
 
 @Entity()
-export class User {
+export class User extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   user_id: string;
+
+  @Column()
+  id: string;
 
   @Column({ type: "varchar", length: 100 })
   name: string;

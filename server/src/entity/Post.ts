@@ -7,11 +7,12 @@ import {
   ManyToOne,
   RelationId,
   JoinColumn,
+  BaseEntity,
 } from "typeorm";
 import { User } from "./User";
 
 @Entity()
-export class Post {
+export class Post extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   post_id: string;
 
