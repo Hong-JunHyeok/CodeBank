@@ -1,18 +1,33 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  UpdateDateColumn,
+  OneToMany,
+} from "typeorm";
+import { Post } from "./Post";
 
 @Entity()
 export class User {
+  @PrimaryGeneratedColumn("uuid")
+  user_id: string;
 
-    @PrimaryGeneratedColumn()
-    id: number;
+  @Column({ type: "varchar", length: 100 })
+  name: string;
 
-    @Column()
-    firstName: string;
+  @Column({ type: "varchar", length: 255 })
+  password: string;
 
-    @Column()
-    lastName: string;
+  @Column({ type: "varchar", length: 100 })
+  email: string;
 
-    @Column()
-    age: number;
+  @CreateDateColumn()
+  createdAt: Date;
 
+  @UpdateDateColumn()
+  updated_at: Date;
+
+  @OneToMany((type) => Post, (post) => post.post_id)
+  post!: Post[];
 }
